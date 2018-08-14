@@ -1,0 +1,45 @@
+{
+  "name": "zoranravic.com",
+  "version": "1.0.0",
+  "description": "Static Site Template for Zox.js",
+  "author": "Zoran Ravic <contact@zoranravic.com> (zoranravic.com)",
+  "license": "MIT",
+  "repository": "zoxjs/static-site-handlebars",
+  "homepage": "http://zoxjs.com/",
+  "main": "src/dev.js",
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "highlight.js": "^9.12.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "svg-textures": "^1.0.1",
+    "zox": "^1.0.27",
+    "zox-handlebars": "^1.0.4",
+    "zox-plugins": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.2",
+    "uglify-es": "^3.3.9"
+  },
+  "scripts": {
+    "start": "node src/dev.js",
+    "static": "node src/static.js",
+    "build": "node src/build.js",
+    "commit": "git add -A && git commit",
+    "push": "git push origin master",
+    "commit-www": "cd ../www && git add -A && git commit",
+    "push-www": "cd ../www && git push origin master",
+    "build-publish": "npm run build && npm run commit && npm run push && npm run publish",
+    "publish": "npm run commit-www && npm run push-www",
+    "build-js": "browserify src/frontend/main.js -o files/bundle.js -d",
+    "build-js-min": "browserify src/frontend/main.js -o files/bundle.js -d && uglifyjs files/bundle.js --ecma 5 -o files/bundle.js",
+    "watch-js": "watchify src/frontend/main.js -o files/bundle.js -d -v",
+    "build-css": "sass src/styles/main.scss files/bundle.css --style=compressed",
+    "watch-css": "sass src/styles/main.scss files/bundle.css --style=compressed --watch"
+  },
+  "plugins": {
+    "dirs": [
+      "src/Plugins"
+    ]
+  }
+}

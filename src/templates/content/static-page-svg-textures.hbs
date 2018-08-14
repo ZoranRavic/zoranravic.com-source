@@ -1,0 +1,38 @@
+<div class="svg-textures">
+    <header>
+        <div class="container">{{{header}}}</div>
+    </header>
+    <main>
+        {{#each sections}}
+            {{#if info}}
+                <section class="info">
+                    <div class="container">{{{info}}}</div>
+                </section>
+            {{else}}
+                <section class="examples">
+                    <div class="container">
+                        <h1>{{title}}</h1>
+                        <div class="row">
+                            {{#each examplesSplit}}
+                                <div class="col-lg-4">
+                                    {{#each this}}
+                                        <div class="example">
+                                            <div class="content">
+                                                <div class="preview"></div>
+                                                <div class="code" contenteditable="true">{{{this}}}</div>
+                                                <div class="error"></div>
+                                            </div>
+                                        </div>
+                                    {{/each}}
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </section>
+            {{/if}}
+        {{/each}}
+    </main>
+    <footer>
+        <div class="container">{{{footer}}}</div>
+    </footer>
+</div>

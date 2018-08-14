@@ -1,0 +1,94 @@
+url: /
+
+heroContent.md: |-
+  Hi, I'm **Zoran Ravic**, developer and designer.
+
+  I also like to work on open source projects in my spare time.
+
+  [Get in touch](mailto:contact@zoranravic.com) or keep scrolling.
+
+sections:
+  - class: blue
+    title: Bio
+    subtext: About me
+    left:
+      - description.md: |-
+          I was first introduced to programming in highschool where I developed passion for C++ and PHP.
+
+          After highschool I got interested in game development and worked as a freelance game dev while studying computer science.
+
+          Unfortenatelly the university program I was taking had a big focus on math, physics and low level programming, which I didn't know when applying.
+    right:
+      - description.md: |-
+          A year before graduating I decided to drop out and set off to find a job using my the newly acquired skills
+          of being able to recreate the C compiler in case the nuclear fallout destroys all existing copies.
+
+          I soon got employed at a local IT company working as a PHP developer where I switched interests to React and TypeScript.
+
+          Eventually I went on to develop open source projects and pursue a carrer as an independent developer.
+
+  - class: green
+    title: Zox.js
+    link: https://zoxjs.com
+    subtext: Web Framework targeting TypeScript developers
+    left:
+      - title: Why?
+        description.md: |-
+          After using express.js I've decided that I need a new framework that lets me exploit all of TypeScript's features.
+      - title: Static Sites
+        description.md: |-
+          Modern sites tend to be developed as single-page apps with an api backend
+          and developing both the frontend and backend in the same framework makes the workflow much smooter.
+
+          Additionally static sites can be used for sites where only admins can edit the content, such as personal websites and blogs.
+    right:
+      - title: GraphQL
+        description.md: |-
+          Originally the main use case for the framework was to make developing an extensible GraphQL api as easy as possible.
+
+          For this putpose I developed a [plugin-based library](https://www.npmjs.com/package/graphql-plugins)
+          that can be used with zox.js as well as other frameworks like express.js.
+      - title: React
+        description.md: |-
+          React is the most popular framework for developing single-page apps,
+          so having built-in support for server-side rendering is a must.
+
+  - class: yellow
+    title: Virtual Elements
+    link: https://www.npmjs.com/package/velements
+    subtext: Minimalistic JSX
+    left:
+      - title: Why?
+        description.md: |-
+          JSX is a pretty handy way of generating HTML elements, but for simple use cases importing React is too big of an overhead.
+      - title: In Node.js
+        description.md: |-
+          The main use case is serializing the VElements to a string for use in static sites.
+
+          It has a big advantage over React here in that it does not need to include comments and metadata in the output.
+    right:
+      - title: In the browser
+        description.md: |-
+          Same as with React you can generate HTML elements and use event listeners,
+          but VElement.js has no state management system.
+      - title: Compatable with React
+        description.md: |-
+          A really neat thing about VElements is that, since they also use the same JSX syntax they can easily be converted to React elements.
+
+          This means that any script that returns VElements as output can easily be used in a React project.
+
+  - class: purple
+    title: Svg Textures.js
+    link: /svg-textures
+    subtext: SVG utilities based on Virtual Elements
+    left:
+      - title: Easy to use
+        description.md: |-
+          The utility allows you to create interesting SVG backrounds with just a single function call.
+
+          The [demo page](/svg-textures) contains a long list of sample patterns
+          which can be edited live in the browser.
+    right:
+      - title: React compatable
+        description.md: |-
+          Since the utilities return VElements this tool can easily be used in a React project.

@@ -1,0 +1,393 @@
+#type: test
+
+header.md: |-
+  # Svg Textures
+  ## By Zoran Ravic
+  Plain color backgrounds are boring, add some texture to them!
+
+  <br>Add it to your project:<br>
+  `npm i svg-textures`
+
+sections:
+- title: Lines
+  examples.md:
+  - |-
+    ```js
+    svgRectPatternLine()
+    ```
+  - |-
+    ```js
+    svgRectPatternLine({
+      strokeWidth: 5
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternLine({
+      strokeWidth: 1
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternLine({
+      size: 10
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternLine({
+      size: 40
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternLine({
+      size: 40,
+      strokeWidth: 25
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternLine({
+      orientation: 'vertical'
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternLine({
+      orientation: '3/8'
+    })
+    ```
+  - |-
+    ```js
+    svgRectPattern({
+      content: [
+        line({ orientation: '3/8' }),
+        line({ orientation: '7/8' }),
+      ]
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternLine({
+      background: '#333',
+      stroke: '#EB613D'
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternLine({
+      orientation: 'horizontal',
+      strokeWidth: 7,
+    })
+    ```
+  - |-
+    ```js
+    svgRectPattern({
+      content: [
+        line({ orientation: 'vertical' }),
+        line({ orientation: 'horizontal' }),
+      ]
+    })
+    ```
+  - |-
+    ```js
+    svgRectPattern({
+      content: [
+        line({ orientation: '2/8' }),
+        line({ orientation: '6/8' }),
+      ]
+    })
+    ```
+
+- info.md: |-
+    All examples are live demos and can be edited in real time.
+
+    Go ahead and try changing the color or size in an example.
+
+    Examples use the default browser text editor which is very limited but should suffice.
+
+- title: Circles
+  examples.md:
+  - |-
+    ```js
+    svgRectPatternCircle()
+    ```
+  - |-
+    ```js
+    svgRectPatternCircle({
+      radius: 4,
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternCircle({
+      radius: 1,
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternCircle({
+      size: 10,
+      radius: 1
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternCircle({
+      size: 40
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternCircleComplement()
+    ```
+  - |-
+    ```js
+    svgRectPatternCircleComplement({
+      size: 50,
+      radius: 25,
+      fill: 'rgba(0,0,0,.13)'
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternCircle({
+      radius: 4,
+      fill: 'transparent',
+      stroke: '#333',
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternCircleComplement({
+      background: '#282828',
+      stroke: 'black'
+    })
+    ```
+
+- info.md: |-
+    All functions return Virtual Elements.
+
+    You can convert them to a string or generate the HTML & SVG Elements in the browser.
+
+    They can also be used in React apps.
+
+- title: Paths
+  examples.md:
+  - |-
+    ```js
+    svgRectPatternPath({
+      path: 'squares',
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternPath({
+      size: 40,
+      path: 'nylon'
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternPath({
+      path: 'waves'
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternPath({
+      path: 'crosses'
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternPath({
+      path: 'woven'
+    })
+    ```
+  - |-
+    ```js
+    svgRectPatternPath({
+      path: 'caps'
+    })
+    ```
+
+- info.md: |-
+    You can use the generated patterns as backgrounds for your svg elements.
+
+    This makes it especially handly for data visualization.
+
+- title: Complex patterns
+  examples.md:
+  - |-
+    ```js
+    svgRect(
+      hexagonPattern()
+    )
+    ```
+  - |-
+    ```js
+    svgRect(
+      squarePattern()
+    )
+    ```
+  - |-
+    ```js
+    svgRect(
+      diagonalSquarePattern()
+    )
+    ```
+  - |-
+    ```js
+    svgRect(
+      squarePattern({
+        fill: '#CCC',
+        background: '#FFF'
+      })
+    )
+    ```
+  - |-
+    ```js
+    svgRect(
+      diagonalSquarePattern({
+        size: 40,
+        fill: '#444',
+        background: '#FFF'
+      })
+    )
+    ```
+  - |-
+    ```js
+    svgRect(
+      cubePattern({
+        size: 50
+      })
+    )
+    ```
+
+- info.md: |-
+    The project is written in TypeScript and uses the VElement library.
+
+    Please support the project by giving it a star on GitHub.
+
+- title: Gradients
+  examples.md:
+  - |-
+    ```js
+    svgRect(
+      diagonalGradient(
+        [ '#F19', '#0CF' ]
+      )
+    )
+    ```
+  - |-
+    ```js
+    svgRect(
+      diagonalGradient(
+        [ '#F19', '#0CF' ]
+      ),
+      patternLine({
+        strokeWidth: 13,
+      })
+    )
+    ```
+  - |-
+    ```js
+    svgRect(
+      rdiagonalGradient(
+        [ '#F19', '#0CF' ]
+        ),
+        patternLine({
+          strokeWidth: 13,
+        })
+    )
+    ```
+  - |-
+    ```js
+    svgRect(
+      verticalGradient(
+        [ '#F19', '#0CF' ]
+      ),
+      patternLine({
+        strokeWidth: 13,
+      })
+    )
+    ```
+  - |-
+    ```js
+    svgRect(
+      horizontalGradient(
+        [ '#F19', '#0CF' ]
+      ),
+      patternLine({
+        strokeWidth: 13,
+      })
+    )
+    ```
+  - |-
+    ```js
+    svgRect(
+      diagonalGradient(
+        [ '#F19', '#0CF' ]
+      ),
+      cubePattern({
+        size: 50
+      })
+    )
+    ```
+
+footer.md: |-
+  ##### Code Example
+
+  let svg = `svgRectPatternLine()`;
+
+  console.log(svg`.toString()`);
+
+  div.appendChild(svg`.toElement()`);
+
+  <hr/>
+
+  ##### Usage
+
+  `svg()` generates an `<svg>` element and takes defs and content as options
+
+  `svgRect()` generates an `<svg>` element with a `<rect>` and takes a list of background patterns
+
+  `pattern()` generates an `<pattern>` element and takes content, size and background color as an options
+
+  Pattern content can be created using `line()`, `circle()`, `circleComplement()`, `path()`
+
+  More complex patterns have their own functions:
+
+  `hexagonPattern()`, `squarePattern()` and `cubePattern()`
+
+  <hr/>
+
+  ##### Helper methods
+
+  To minimize the amount of code you have to write several helper methods were created:
+
+
+
+  `patternLine()`, `patternCircle()`, `patternCircleComplement()` and `patternLinePath()`
+
+
+
+  `svgRectPattern()` is a shorthand for `svgRect(pattern(options))`
+
+  `svgRectPatternLine()` shorthand for an svg with a line pattern
+
+  `svgRectPatternCircle()` shorthand for an svg with a circle pattern
+
+  `svgRectPatternCircleComplement()` shorthand for an svg with a complemented circle pattern
+
+  `svgRectPatternPath()` shorthand for an svg with a path pattern
+
+  <hr/>
+
+  `<linearGradient>` elements can be created using:
+
+  `diagonalGradient()`, `rdiagonalGradient()`, `verticalGradient()` and `horizontalGradient()`
+
+  Each of those functions takes an array of colors to use in the gradient

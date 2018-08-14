@@ -1,0 +1,43 @@
+{{#* inline "part"}}
+    <div class="part">
+        {{#if title}}
+            <h3>
+                {{#if link}}
+                    <a href="{{link}}">{{title}}</a>
+                {{else}}
+                    {{title}}
+                {{/if}}
+            </h3>
+        {{/if}}
+        <div class="description">{{{description}}}</div>
+    </div>
+{{/inline}}
+<div class="home">
+    <section class="hero">
+        <div class="bg-svg"></div>
+        <div class="content">{{{heroContent}}}</div>
+    </section>
+    {{#each sections}}
+        <section class="section {{class}}">
+            <div class="bg-svg"></div>
+            <div class="content">
+                <h2 class="title">
+                    {{#if link}}
+                        <a href="{{link}}">{{title}}</a>
+                    {{else}}
+                        {{title}}
+                    {{/if}}
+                </h2>
+                <p class="subtext">{{{subtext}}}</p>
+                <div class="row">
+                    <div class=" col-lg-6">
+                        {{#each left}}{{> part}}{{/each}}
+                    </div>
+                    <div class=" col-lg-6">
+                        {{#each right}}{{> part}}{{/each}}
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{/each}}
+</div>
