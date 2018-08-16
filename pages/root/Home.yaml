@@ -8,7 +8,7 @@ heroContent.md: |-
   [Get in touch](mailto:contact@zoranravic.com) or keep scrolling.
 
 sections:
-  - class: blue
+  - class: bio blue
     title: Bio
     subtext: About me
     left:
@@ -78,7 +78,7 @@ sections:
           This means that any script that returns VElements as output can easily be used in a React project.
 
   - class: purple
-    title: Svg Textures.js
+    title: Svg Textures
     link: /svg-textures
     subtext: SVG utilities based on Virtual Elements
     left:
