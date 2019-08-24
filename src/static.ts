@@ -9,5 +9,5 @@ bootstrap({
 }).then(container =>
 {
     startServer(container);
-    console.log('Started at localhost:8080');
+    console.log('Started at http://localhost:8080');
 });
